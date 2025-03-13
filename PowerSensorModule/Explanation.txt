@@ -1,0 +1,10 @@
+This is power sensor module with C language compile by Arduino IDE
+-equipment
+  1.Esp32
+  2.ZMPT101b
+  3.OLED
+This module will publish stage of voltage from calculated voltage that sensor(ZMPT101b) detected. If voltage is lower than 90% of 220(nomal voltage input) or higher than 110% of 220 esp32 will publish volt stage that is equal to "0". If voltage do not meet any condition esp32 will publish volt stage that is equal to "1".
+This module publish volt stage by title TOPIC_PREFIX/volt/stage please change TOPIC_PREFIX in config.h file before use it in any device.
+you can add mqtt broker and wifi information in config.h file.
+
+Thank you
