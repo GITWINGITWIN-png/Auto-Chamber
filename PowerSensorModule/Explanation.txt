@@ -1,8 +1,18 @@
 This is power sensor module with C language compile by Arduino IDE
 -equipment
-  1.Esp32
-  2.ZMPT101b
-  3.OLED
+  1. Esp32
+  2. ZMPT101b
+  3. OLED
+-library
+  1. WiFi.h by esp32 Wifi support Modified by Ivan Grokhotkov free software
+  2. PubSubClient.h by Nicholas O'Leary MIT Lisence**(The copyright notice and license text must be included in any copies or substantial portions of the software.)**
+  3. SPI.h by Hristo Gochkov free software
+  4. Wire.h by Nicholas Zambetti free software
+  5. Adafruit_GFX.h by Adafruit Industries BSD License**(Must include the copyright notice, license text, and disclaimer in any redistributions.)**
+  6. Adafruit_SSD1306.h by Adafruit Industries BSD License**(Must include the copyright notice, license text, and disclaimer in any redistributions.)**
+  7. ZMPT101B.h by Ruslan Koptiev and Abdurraziq Bachmid MIT Lisence**(The copyright notice and license text must be included in any copies or substantial portions of the software.)**
+  8. MQTT.h by Joël Gähwiler MIT Lisence**(The copyright notice and license text must be included in any copies or substantial portions of the software.)**
+
 This module will publish stage of voltage from calculated voltage that sensor(ZMPT101b) detected. If voltage is lower than 90% of 220(nomal voltage input) or higher than 110% of 220 esp32 will publish volt stage that is equal to "0". If voltage do not meet any condition esp32 will publish volt stage that is equal to "1".
 This module publish volt stage by title TOPIC_PREFIX/volt/stage please change TOPIC_PREFIX in config.h file before use it in any device.
 you can add mqtt broker and wifi information in config.h file.
